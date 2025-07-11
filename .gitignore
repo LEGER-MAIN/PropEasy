@@ -1,0 +1,88 @@
+# PropEasy - Sistema Inmobiliario
+# Archivos y directorios que deben ser ignorados por Git
+
+# Archivos de configuración local
+config/config.php
+config/local.php
+config/database.local.php
+.env
+.env.local
+.env.production
+
+# Archivos temporales y de desarrollo
+*.tmp
+*.temp
+*.log
+*.cache
+*.bak
+*.swp
+*.swo
+*~
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de uploads (excepto placeholder)
+public/assets/uploads/*
+!public/assets/uploads/.gitkeep
+
+# Archivos de sesión
+sessions/
+tmp/
+
+# Archivos de caché
+cache/
+*.cache
+
+# Archivos de backup de base de datos
+*.sql.bak
+*.sql.gz
+backup/
+
+# Archivos de logs
+logs/
+*.log
+
+# Archivos de configuración de servidor
+.htaccess.local
+public/.htaccess.local
+
+# Archivos de prueba (en producción)
+public/test-*.php
+public/check-*.php
+public/create-*.php
+
+# Archivos de documentación temporal
+docs/temp/
+docs/draft/
+
+# Archivos de vendor (si no se usa Composer)
+# vendor/
+
+# Archivos de node_modules (si se usa npm)
+node_modules/
+package-lock.json
+
+# Archivos de build
+dist/
+build/
+
+# Archivos de coverage
+coverage/
+*.coverage
+
+# Archivos de configuración de PHP
+php.ini
+php.ini.local
+
+# Archivos de configuración de servidor web
+nginx.conf
+apache.conf 

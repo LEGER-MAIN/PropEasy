@@ -1,0 +1,25 @@
+RewriteEngine On
+
+# Si el archivo o directorio existe, no hacer nada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todo lo demás a index.php y pasar la URL como parámetro
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Configuraciones de seguridad
+<Files "*.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Configuraciones de caché para archivos estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+</IfModule> 

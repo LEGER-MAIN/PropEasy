@@ -1,0 +1,11 @@
+# Configuración para archivos de prueba
+<Files "test_*.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Redirigir todo lo demás a public/
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/$1 [L] 
